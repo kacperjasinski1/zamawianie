@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <title>Menu</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Menu</h1>
+        <div class="menu">
+            <div class="item">
+                <img src="images/pizza.jpg" alt="Pizza">
+                <span>Pizza - 30zł</span>
+                <button onclick="addToCart('Pizza', 30)">Dodaj do koszyka</button>
+            </div>
+            <div class="item">
+                <img src="images/burger.jpg" alt="Burger">
+                <span>Burger - 25zł</span>
+                <button onclick="addToCart('Burger', 25)">Dodaj do koszyka</button>
+            </div>
+            <div class="item">
+                <img src="images/sushi.jpg" alt="Sushi">
+                <span>Sushi - 40zł</span>
+                <button onclick="addToCart('Sushi', 40)">Dodaj do koszyka</button>
+            </div>
+            <div class="item">
+                <img src="images/kebab.jpg" alt="Kebab">
+                <span>Kebab - 20zł</span>
+                <button onclick="addToCart('Kebab', 20)">Dodaj do koszyka</button>
+            </div>
+            <div class="item">
+                <img src="images/frytki.jpg" alt="Frytki">
+                <span>Frytki - 10zł</span>
+                <button onclick="addToCart('Frytki', 10)">Dodaj do koszyka</button>
+            </div>
+            <div class="item">
+                <img src="images/coca_cola.jpg" alt="Coca Cola">
+                <span>Coca Cola - 5zł</span>
+                <button onclick="addToCart('Coca Cola', 5)">Dodaj do koszyka</button>
+            </div>
+        </div>
+        <div class="cart">
+            <h3>Koszyk</h3>
+            <div id="cartItems"></div>
+            <p id="totalPrice">Łącznie: 0zł</p>
+            <label for="delivery">Sposób dostawy:</label>
+            <select id="delivery">
+                <option value="0">Na miejscu (+0zł)</option>
+                <option value="10">Z dojazdem (+10zł)</option>
+            </select>
+            <button onclick="checkout()">Podsumowanie zamówienia</button>
+        </div>
+    </div>
+    <div id="orderSummary" class="modal" style="display:none;"></div>
+    <script src="skrypt.js"></script>
+</body>
+</html>

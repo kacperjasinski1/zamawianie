@@ -4,9 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Witaj w naszym programie do zamawiania jedzenia!</title>
+    <title>WSE_FoodOrder - Ekran Powitalny</title>
 </head>
 <body>
+    <header>
+        <h1>FoodOrder</h1>
+        <p>Witamy w naszej aplikacji do zamawiania jedzenia online!</p>
+    </header>
+
+    <div class="sub-menu">
+        <button id="light-mode">Tryb Jasny</button>
+        <button id="dark-mode">Tryb Ciemny</button>
+    </div>
+
+    <a href="menu.html" class="menu-button">Przejdź do Menu</a>
+
+    <footer>
+        <p>&copy; 2024 WSE_FoodOrder. Wszelkie prawa zastrzeżone.</p>
+        <p>Autorzy: Kacper Jasiński, Paweł Czernecki, Bartosz Wiszniewski</p>
+    </footer>
+
+    <script>
+        const lightModeButton = document.getElementById('light-mode');
+        const darkModeButton = document.getElementById('dark-mode');
+
+        lightModeButton.addEventListener('click', () => {
+            document.body.classList.remove('dark');
+        });
+
+        darkModeButton.addEventListener('click', () => {
+            document.body.classList.add('dark');
+        });
+    </script>
     <div class="welcome">
         <img src="images/burger.jpg" alt="Burger" class="welcome-image">
         <h1>Witaj w naszym programie do zamawiania jedzenia!</h1>
